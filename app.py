@@ -10,7 +10,7 @@ st.markdown("<h1 style='text-align: center;'>Chat with Maiiah</h1>", unsafe_allo
 openai.api_key = st.secrets.openai_api_key
 
 # Set org ID and API key
-#openai.organization = "<YOUR_OPENAI_ORG_ID>"
+#openai.organization = "<OPENAI_ORG_ID>"
 
 # Initialise session state variables
 if 'generated' not in st.session_state:
