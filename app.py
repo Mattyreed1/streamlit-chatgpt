@@ -7,7 +7,7 @@ st.set_page_config(page_title="Lil Buddy", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'>Chat with Maiiah</h1>", unsafe_allow_html=True)
 
 # Set API Key
-openai.api_key = OPENAI_API_KEY
+openai.api_key = st.secrets.OPENAI_API_KEY
 
 # Set org ID and API key
 #openai.organization = "<YOUR_OPENAI_ORG_ID>"
