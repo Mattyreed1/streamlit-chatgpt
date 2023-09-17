@@ -1,10 +1,28 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
+from PIL import Image
 
-# Setting page title and header
+# Setting page title
 st.set_page_config(page_title="Lil Buddy", page_icon=":robot_face:")
-st.markdown("<h1 style='text-align: center;'>Chat with Maiiah</h1>", unsafe_allow_html=True)
+
+# Setting the logo header
+# opening the logo image
+image = Image.open('images/ta-logo.png')
+#displaying the image in center on streamlit app
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.write(' ')
+
+with col2:
+    st.image(image, width=200)
+
+with col3:
+    st.write(' ')
+
+# Setting the header
+st.markdown("<h1 style='text-align: center;'>Chat with your LifeAlign Coach</h1>", unsafe_allow_html=True)
 
 # Set API Key
 openai.api_key = st.secrets.openai_api_key
