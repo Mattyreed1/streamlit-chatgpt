@@ -6,8 +6,11 @@ from streamlit_chat import message
 st.set_page_config(page_title="Lil Buddy", page_icon=":robot_face:")
 st.markdown("<h1 style='text-align: center;'>Chat with Maiiah</h1>", unsafe_allow_html=True)
 
+# Set API Key
+openai.api_key = gpt_api_key
+
 # Set org ID and API key
-# openai.organization = "<YOUR_OPENAI_ORG_ID>"
+#openai.organization = "<YOUR_OPENAI_ORG_ID>"
 
 # Initialise session state variables
 if 'generated' not in st.session_state:
